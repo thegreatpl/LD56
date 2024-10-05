@@ -43,7 +43,7 @@ public class ResourceGeneratorScript : MonoBehaviour
             {
                 //spawn in new node. 
                 var newNode = Instantiate(ResourceNodePrefab);
-                newNode.transform.position = Extensions.FromVector2(Random.insideUnitCircle * SpawnDistance) + transform.position;
+                newNode.transform.position = transform.position.RandomLocationInRadius(SpawnDistance);
                 var nodeScript = newNode.GetComponent<ResourceNodeScript>();
                 nodeScript.SetDefinition(ResourceDefinition);
                 nodeScript.AddResources(Random.Range(MinResourceAmount, MaxResourceAmount));

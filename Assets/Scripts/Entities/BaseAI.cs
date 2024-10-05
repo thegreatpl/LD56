@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using TreeEditor;
 using UnityEngine;
 
+[RequireComponent(typeof(BaseAttributes))]
 [RequireComponent(typeof(EntityController))]
 public class BaseAI : MonoBehaviour
 {
     public EntityController controller;
+
+    public BaseAttributes attributes;
 
 
     public Vector3 Target; 
@@ -15,6 +18,7 @@ public class BaseAI : MonoBehaviour
     void Start()
     {
         controller = GetComponent<EntityController>();
+        attributes = GetComponent<BaseAttributes>();
     }
 
     // Update is called once per frame
@@ -37,5 +41,12 @@ public class BaseAI : MonoBehaviour
         if (hit.transform?.gameObject == other)
         { return true; }
         return false;
+    }
+
+
+    protected Collider2D[] SeeObjectsOfLayer(int layer)
+    {
+        int layermask = 1<< layer;
+        return Physics2D.OverlapCircleAll(transform.position, attributes.VisionDistance, layermask);
     }
 }

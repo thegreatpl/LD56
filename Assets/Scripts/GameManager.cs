@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
 
     public List<PrefebDefinition> PrefebDefinitions;
 
+
+    public List<ResourceDefinition> ResourceDefinitions;
+
     // Start is called before the first frame update
     void Start()
     {

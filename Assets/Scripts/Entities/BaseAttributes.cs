@@ -6,17 +6,24 @@ using UnityEngine;
 public class BaseAttributes : MonoBehaviour
 {
 
-    public int MaxHP;
+    public float MaxHP;
 
     public float Speed;
 
-    public int CurrentHP;
+    public float CurrentHP;
 
     public float Defense;
 
+    public float Attack; 
+
     public float VisionDistance;
 
-    public float MaxWeight; 
+    public float MaxWeight;
+
+    /// <summary>
+    /// how fast this entity collects resources. 
+    /// </summary>
+    public float GatherRate; 
 
     public float CurrentWeight 
     { 
@@ -33,7 +40,7 @@ public class BaseAttributes : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cargo = new Dictionary<string, Resource>();
     }
 
     // Update is called once per frame

@@ -13,4 +13,15 @@ public class ResourceDefinition
     public Color Color;
 
     public float Weight; 
+
+
+    public Resource GetResourceFromDefinition()
+    {
+        return new Resource()
+        {
+            Type = Name,
+            IndividualWeight = Weight,
+            Amount = 0
+        };
+    }
 }
