@@ -102,6 +102,7 @@ public class WorkerAI : BaseAI
                     amountToDrop = cargoToDrop.Amount;
                 cargoToDrop.Amount -= amountToDrop;
                 nest.DropOffResource(cargoToDrop.Type, amountToDrop);
+                attributes.ResourcedDelivered += amountToDrop;
 
             }
         }

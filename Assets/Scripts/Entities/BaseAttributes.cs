@@ -49,7 +49,10 @@ public class BaseAttributes : MonoBehaviour
         }
     }
 
-    public Dictionary<string, Resource> Cargo; 
+    public Dictionary<string, Resource> Cargo;
+
+
+    public float ResourcedDelivered; 
 
 
 
@@ -57,6 +60,7 @@ public class BaseAttributes : MonoBehaviour
     void Start()
     {
         Cargo = new Dictionary<string, Resource>();
+        ResourcedDelivered = 0;
     }
 
     // Update is called once per frame

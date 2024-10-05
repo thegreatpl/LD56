@@ -18,7 +18,7 @@
             "Name": "Legs",
             "Key": "L",
             "Cost": [{
-                    "Type": "Copper",
+                    "Type": "Iron",
                     "Amount": 1.0,
                     "IndividualWeight": 0.0
                 }
@@ -99,7 +99,7 @@
                 }
             ],
             "Benefits": [{
-                    "AttributeType": 0,
+                    "AttributeType": 6,
                     "Bonus": 0.5
                 }
             ]

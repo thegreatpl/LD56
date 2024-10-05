@@ -13,6 +13,11 @@ public class ComponentManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Reload(); 
+    }
+
+    public void Reload()
+    {
         _compdefinitions = new Dictionary<string, ComponentDefinition>();
         foreach (var definition in ComponentDefinitions)
         {
@@ -45,7 +50,12 @@ public class ComponentManager : MonoBehaviour
             {
                 if (!result.Contains(cost))
                 {
-                    result.Add(cost);
+                    result.Add(new Resource()
+                    {
+                        Type = cost.Type, 
+                        Amount = cost.Amount, 
+                        IndividualWeight = cost.IndividualWeight//might not be filling this in. 
+                    });
                 }
                 else
                 {
@@ -55,5 +65,10 @@ public class ComponentManager : MonoBehaviour
         }
 
         return result;
+    }
+
+    public List<string> GetKeys()
+    {
+        return _compdefinitions.Keys.ToList();  
     }
 }
