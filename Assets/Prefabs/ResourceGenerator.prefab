@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 2849481192417602723}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.239649, y: 3.1157966, z: 0.04523526}
+  m_LocalPosition: {x: -5.239649, y: 3.1157966, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41,6 +41,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2849481192417602723}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 922e6d62d15dae7488c9d58d931ab46a, type: 3}
+  m_Script: {fileID: 11500000, guid: cd266f29de4b70d4dbcf9435d06761f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ResourceNodePrefab: {fileID: 0}
+  ResourceNodes: []
+  MaxNodes: 1
+  SpawnRate: 1000
+  SpawnDistance: 10
+  MaxResourceAmount: 0
+  MinResourceAmount: 0
+  ResourceDefinition:
+    Name: Test
+    Color: {r: 0.9849057, g: 0, b: 0, a: 0}
+    Weight: 1

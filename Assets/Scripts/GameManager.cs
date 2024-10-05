@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -23,5 +24,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public GameObject GetPrefab(string name)
+    {
+        return PrefebDefinitions.FirstOrDefault(x => x.Name == name)?.Prefab;
     }
 }
