@@ -305,6 +305,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1552929336}
   - component: {fileID: 1552929335}
+  - component: {fileID: 1552929337}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -324,6 +325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2e942900b319294ba1c881e31134dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ComponentManager: {fileID: 0}
   PrefebDefinitions:
   - Name: ResourceNode
     Prefab: {fileID: 3041377473689568622, guid: 2c3dfacba4c76f942ac1e26617cb6a93, type: 3}
@@ -348,6 +350,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1552929337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552929334}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7ccf59d65bd78742a07c48e951388df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ComponentDefinitions:
+  - Name: 
+    Key: 
+    Cost: []
+    Benefits:
+    - AttributeType: 0
+      Bonus: 0
 --- !u!1 &2015678873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1079674197266627850, guid: 63a8f64576a98234c9f3d34fd4164145, type: 3}
@@ -366,6 +387,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Resources: []
+--- !u!114 &2015678879 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2970197129474634151, guid: 63a8f64576a98234c9f3d34fd4164145, type: 3}
+  m_PrefabInstance: {fileID: 5885845912114597954}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2015678873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4dc0568106f596489bbfe7661c9aad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3001461209001810925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -434,6 +466,10 @@ PrefabInstance:
       propertyPath: VisionDistance
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 9188894348576941144, guid: 753bc3e9ea5717840964268572b4c481, type: 3}
+      propertyPath: Nest
+      value: 
+      objectReference: {fileID: 2015678879}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

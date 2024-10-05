@@ -12,6 +12,9 @@ public class BaseAI : MonoBehaviour
     public BaseAttributes attributes;
 
 
+    public NestController Nest; 
+
+
     public Vector3 Target; 
 
     // Start is called before the first frame update
@@ -41,6 +44,12 @@ public class BaseAI : MonoBehaviour
         if (hit.transform?.gameObject == other)
         { return true; }
         return false;
+    }
+
+
+    protected void ReturnToNest()
+    {
+        MoveToPositionDumb(Nest.transform.position);
     }
 
 

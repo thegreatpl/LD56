@@ -38,7 +38,7 @@ public class WorkerAI : BaseAI
                 if (attributes.CurrentWeight <=0)
                     workerState= WorkerState.Gathering; 
 
-                Return();
+                ReturnToNest();
                 break;
         }
     }
@@ -63,13 +63,7 @@ public class WorkerAI : BaseAI
         }
     }
 
-    /// <summary>
-    /// head back to the nest. 
-    /// </summary>
-    void Return()
-    {
-        MoveToPositionDumb(Target);
-    }
+
 
     private void OnCollisionStay2D(Collision2D collision)
     {
