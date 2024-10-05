@@ -20,7 +20,7 @@ public class BaseAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        MoveToPositionDumb(Target); 
+       // MoveToPositionDumb(Target); 
     }
 
     protected void MoveToPositionDumb(Vector3 position)
@@ -28,5 +28,14 @@ public class BaseAI : MonoBehaviour
         var distance = position - transform.position;
 
         controller.Distance = distance;
+    }
+
+
+    protected bool CanSee(GameObject other)
+    {
+        var hit = Physics2D.Raycast(transform.position, other.transform.position - transform.position, controller.attributes.VisionDistance);
+        if (hit.transform?.gameObject == other)
+        { return true; }
+        return false;
     }
 }

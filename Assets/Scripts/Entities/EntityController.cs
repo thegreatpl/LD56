@@ -20,7 +20,7 @@ public class EntityController : MonoBehaviour
     {
         if (Distance != Vector3.zero)
         {
-            transform.position += Vector3.ClampMagnitude(Distance, attributes.Speed); 
+            transform.position += Vector3.ClampMagnitude(Distance, attributes.Speed) * Time.deltaTime; 
         }
     }
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BaseAttributes : MonoBehaviour
@@ -13,8 +14,19 @@ public class BaseAttributes : MonoBehaviour
 
     public float Defense;
 
-    public float VisionDistance; 
+    public float VisionDistance;
 
+    public float MaxWeight; 
+
+    public float CurrentWeight 
+    { 
+        get
+        {
+            return Cargo.Values.Select(x => x.CurrentWeight).Sum();
+        }
+    }
+
+    public Dictionary<string, Resource> Cargo; 
 
 
 
