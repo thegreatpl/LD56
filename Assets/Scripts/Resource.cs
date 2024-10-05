@@ -14,5 +14,13 @@ public class Resource
     public float IndividualWeight;
 
     public float CurrentWeight { get { return IndividualWeight * Amount; } }
+
+
+    public static bool operator ==(Resource a, Resource b)
+    {
+        return a.Type == b.Type; 
+    }
+
+    public static bool operator !=(Resource a, Resource b) { return !(a == b); }
 }
 

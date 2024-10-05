@@ -363,12 +363,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ComponentDefinitions:
-  - Name: 
-    Key: 
-    Cost: []
+  - Name: Basic Eye
+    Key: E
+    Cost:
+    - Type: 
+      Amount: 0
+      IndividualWeight: 0
     Benefits:
-    - AttributeType: 0
-      Bonus: 0
+    - AttributeType: 4
+      Bonus: 1
 --- !u!1 &2015678873 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1079674197266627850, guid: 63a8f64576a98234c9f3d34fd4164145, type: 3}

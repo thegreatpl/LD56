@@ -23,7 +23,10 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         ComponentManager componentManager = GetComponent<ComponentManager>();
-        
+        DontDestroyOnLoad(gameObject);
+
+
+        StartCoroutine(LoadData("Default1")); 
     }
 
     // Update is called once per frame
@@ -35,5 +38,17 @@ public class GameManager : MonoBehaviour
     public GameObject GetPrefab(string name)
     {
         return PrefebDefinitions.FirstOrDefault(x => x.Name == name)?.Prefab;
+    }
+
+
+    IEnumerator LoadData(string ModFolder)
+    {
+        FileLoader.ModPath = $"{Application.streamingAssetsPath}/ModFolder";
+
+        ResourceDefinitions = FileLoader.LoadJson<ResourceFile>("Resources").definitions;
+
+        yield return null;
+        ComponentManager.ComponentDefinitions = FileLoader.LoadJson<ComponentFile>("Components").ComponentDefinitions; 
+        yield return null;
     }
 }

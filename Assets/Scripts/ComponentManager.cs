@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ComponentManager : MonoBehaviour
@@ -27,5 +29,31 @@ public class ComponentManager : MonoBehaviour
     public ComponentDefinition GetComponentDefinition(string key)
     {
         return _compdefinitions[key];
+    }
+
+    public List<Resource> CostOfDNA(string DNA)
+    {
+        var split = DNA.Split('|');
+
+        var result = new List<Resource>();
+
+        foreach (var item in split)
+        {
+            if (!_compdefinitions.ContainsKey(item)) 
+                continue;
+            foreach (var cost in _compdefinitions[item].Cost)
+            {
+                if (!result.Contains(cost))
+                {
+                    result.Add(cost);
+                }
+                else
+                {
+                    result.First(x => x == cost).Amount+= cost.Amount;
+                }
+            }
+        }
+
+        return result;
     }
 }

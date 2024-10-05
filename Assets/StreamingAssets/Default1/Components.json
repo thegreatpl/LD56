@@ -1,0 +1,108 @@
+{
+    "ComponentDefinitions": [{
+            "Name": "Heart",
+            "Key": "H",
+            "Cost": [{
+                    "Type": "Iron",
+                    "Amount": 1.0,
+                    "IndividualWeight": 0.0
+                }
+            ],
+            "Benefits": [{
+                    "AttributeType": 0,
+                    "Bonus": 1.0
+                }
+            ]
+        },
+		{
+            "Name": "Legs",
+            "Key": "L",
+            "Cost": [{
+                    "Type": "Copper",
+                    "Amount": 1.0,
+                    "IndividualWeight": 0.0
+                }
+            ],
+            "Benefits": [{
+                    "AttributeType": 1,
+                    "Bonus": 0.5
+                }
+            ]
+        }, 
+		{
+            "Name": "Carapace",
+            "Key": "C",
+            "Cost": [{
+                    "Type": "Iron",
+                    "Amount": 2.0,
+                    "IndividualWeight": 0.0
+                }
+            ],
+            "Benefits": [{
+                    "AttributeType": 2,
+                    "Bonus": 1.0
+                }
+            ]
+        }, 
+		{
+            "Name": "Claw",
+            "Key": "A",
+            "Cost": [{
+                    "Type": "Iron",
+                    "Amount": 2.0,
+                    "IndividualWeight": 0.0
+                }
+            ],
+            "Benefits": [{
+                    "AttributeType": 3,
+                    "Bonus": 1.0
+                }
+            ]
+        }, 
+		{
+            "Name": "Eye",
+            "Key": "E",
+            "Cost": [{
+                    "Type": "Iron",
+                    "Amount": 0.5,
+                    "IndividualWeight": 0.0
+                }
+            ],
+            "Benefits": [{
+                    "AttributeType": 4,
+                    "Bonus": 1.0
+                }
+            ]
+        }, 
+		{
+            "Name": "Muscles",
+            "Key": "M",
+            "Cost": [{
+                    "Type": "Iron",
+                    "Amount": 1.0,
+                    "IndividualWeight": 0.0
+                }
+            ],
+            "Benefits": [{
+                    "AttributeType": 5,
+                    "Bonus": 1.0
+                }
+            ]
+        }, 
+		{
+            "Name": "Graspers",
+            "Key": "G",
+            "Cost": [{
+                    "Type": "Iron",
+                    "Amount": 1.0,
+                    "IndividualWeight": 0.0
+                }
+            ],
+            "Benefits": [{
+                    "AttributeType": 0,
+                    "Bonus": 0.5
+                }
+            ]
+        }
+    ]
+}
