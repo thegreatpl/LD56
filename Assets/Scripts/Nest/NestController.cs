@@ -91,7 +91,7 @@ public class NestController : MonoBehaviour
                 }
             }
 
-            dna.Trim('|'); 
+            dna = dna.Trim('|'); 
 
         }
         if (SpawnWorker(dna))
